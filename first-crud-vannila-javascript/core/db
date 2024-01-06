@@ -1,1 +1,15 @@
-crudao da massa
+{
+  "todos": [
+    {
+      "date": "2024-01-06T20:39:13.989Z",
+      "content": "crud de qualidade",
+      "done": false
+    },
+    {
+      "date": "2024-01-06T20:39:13.989Z",
+      "content": "novo crud com mais qualidade",
+      "done": false
+    }
+  ],
+  "dogs": []
+}

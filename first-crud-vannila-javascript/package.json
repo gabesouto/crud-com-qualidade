@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "first-crud-vannila-javascript",
   "main": "index.js",
-  "scripts": {
-    "start:crud": " npx ts-node ./core/crud.ts ",
-    "dev:crud": " nodemon  ts, tsx --exec 'npm run start:crud'",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+"scripts": {
+  "start:crud": "npx ts-node ./core/crud.ts",
+  "dev:crud": "nodemon --ext ts,tsx --exec 'npm run start:crud'"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
