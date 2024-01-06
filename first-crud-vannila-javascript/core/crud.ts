@@ -68,14 +68,26 @@ function update(id:string, partialTodo:Partial<todo>){
    return updatedTodo
 }
 
+function deleteById(id: string){
+   const todos = read();
+
+   const todosWithoutOne = todos.filter((todo) => todo.id !== id )
+
+      fs.writeFileSync(DB_FILE_PATH, JSON.stringify({
+     todos:todosWithoutOne,
+   }, null, 2))
+}
+
 function clearDB (){
    fs.writeFileSync(DB_FILE_PATH, "")
 }
 
-clearDB()
-create("primeiro crud de qualidade")
-create(" segundo novo crud com mais qualidade")
-const thirdTodo =  create("terceiro novo crud com mais qualidade")
+
+const firstTodo = create("primeiro crud de qualidade");
+const secondTodo = create(" segundo novo crud com mais qualidade");
+const thirdTodo =  create("terceiro novo crud com mais qualidade");
+deleteById(secondTodo.id)
+
 console.log(read());
 
 update(thirdTodo.id, {
